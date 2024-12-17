@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/jeux"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouveau jeu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input type="text" label="Image" [(ngModel)]="jeu.imageurl"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Titre" [(ngModel)]="jeu.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Age" [(ngModel)]="jeu.age"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Durée" [(ngModel)]="jeu.duration"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Nombre de joueurs" [(ngModel)]="jeu.nbplayers"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" label="Description" [(ngModel)]="jeu.description"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Prix" [(ngModel)]="jeu.price"></ion-input>
+  </ion-item>
+  <p class="text-center">
+    <ion-button (click)="add()">Ajouter</ion-button>
+  </p>
+</ion-content>

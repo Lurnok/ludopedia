@@ -1,0 +1,7 @@
+{
+  "name": "ludopedia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
