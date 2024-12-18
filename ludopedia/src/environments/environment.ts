@@ -4,12 +4,12 @@
 
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyBKjwY1z3N_ZNNRXQl_EsU9aW4Ho7SO-uw",
-    authDomain: "ludopedia-d352d.firebaseapp.com",
-    projectId: "ludopedia-d352d",
-    storageBucket: "ludopedia-d352d.firebasestorage.app",
-    messagingSenderId: "237475712399",
-    appId: "1:237475712399:web:716560405451802a524ffa"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
   },
   production: false
 };
