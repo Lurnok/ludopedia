@@ -65,8 +65,25 @@ export class JeuPage implements OnInit {
     })
   }
 
-  onDelete(id: any) {
-    this.Jeux.delete(id);
-    this.router.navigate(['/jeux'])
+  async onDelete(id: any) {
+    const alert = await this.alertCtrl.create({
+      header: 'Etes vous sûr de vouloir supprimer ?',
+      subHeader: 'Cette action est irréversible',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'Cancel'
+        },{
+          text: "Confirmer",
+          handler: () => {
+            this.Jeux.delete(id);
+            this.router.navigate(['/jeux'])
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+    
   }
 }

@@ -35,10 +35,53 @@ export class JeuNewPage implements OnInit {
     });
   }
 
-  add() {
-    this.Jeux.saveNewJeu(this.jeu).then(() => {
-      this.jeu = new Jeu();
-      this.presentToast();
+  async errorToast(missingFields : Array<string>){
+    let message = "Les champs : \n";
+    missingFields.forEach(champs => {
+      message += champs + ", ";
     })
+    message += ' sont vides ou incorrects';
+
+    const toast = this.toastCtrl.create({
+      message : message,
+      duration : 2000,
+      color: 'danger'
+    });
+    (await toast).present();
+  }
+
+  add() {
+    // let missingFields = new Array<string>();
+
+    // if(this.jeu.age <= 0)
+    //   missingFields.push('age');
+
+    // if(this.jeu.description = "")
+    //   missingFields.push('description');
+
+    // if(this.jeu.duration <= 0)
+    //   missingFields.push('duree');
+
+    // if(this.jeu.imageurl = "")
+    //   missingFields.push('image');
+
+    // if(this.jeu.nbplayers <= 0)
+    //   missingFields.push('nombre de joueurs')
+
+    // if(this.jeu.price <= 0)
+    //   missingFields.push('prix')
+    
+    // if(this.jeu.title = "")
+    //   missingFields.push("titre");
+
+    // if(missingFields.length > 0){
+    //   this.errorToast(missingFields);
+    // }else{
+      this.Jeux.saveNewJeu(this.jeu).then(() => {
+        this.jeu = new Jeu();
+        this.presentToast();
+      })
+    //}
+    
   }
 }

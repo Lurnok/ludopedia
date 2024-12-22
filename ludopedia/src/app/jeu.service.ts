@@ -36,7 +36,8 @@ export class JeuService {
       duration: jeu.duration,
       imageurl: jeu.imageurl,
       nbplayers: jeu.nbplayers,
-      price: jeu.price
+      price: jeu.price,
+      description: jeu.description,
     } as Jeu);
   }
 
@@ -60,7 +61,8 @@ export class JeuService {
       duration: jeu.duration,
       imageurl: jeu.imageurl,
       nbplayers: jeu.nbplayers,
-      price: jeu.price
+      price: jeu.price,
+      description: jeu.description,
     });
   }
 
